@@ -1,15 +1,15 @@
 {
-  "name": "n8n-nodes-<...>",
+  "name": "n8n-nodes-bcpmail",
   "version": "0.1.0",
-  "description": "",
+  "description": "n8n nodes for BCP Mail",
   "keywords": [
     "n8n-community-node-package"
   ],
   "license": "MIT",
   "homepage": "",
   "author": {
-    "name": "",
-    "email": ""
+    "name": "Quang",
+    "email": "quangdovinh@bizfly.vn"
   },
   "repository": {
     "type": "git",
@@ -33,12 +33,10 @@
   "n8n": {
     "n8nNodesApiVersion": 1,
     "credentials": [
-      "dist/credentials/ExampleCredentialsApi.credentials.js",
-      "dist/credentials/HttpBinApi.credentials.js"
+      "dist/credentials/BcpApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/ExampleNode/ExampleNode.node.js",
-      "dist/nodes/HttpBin/HttpBin.node.js"
+      "dist/nodes/BcpMail/BcpMail.node.js"
     ]
   },
   "devDependencies": {
