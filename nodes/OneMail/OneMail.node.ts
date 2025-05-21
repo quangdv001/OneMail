@@ -1,23 +1,23 @@
 import { ILoadOptionsFunctions, INodeType, INodeTypeDescription, NodeConnectionType } from 'n8n-workflow';
 
-export class BcpMail implements INodeType {
+export class OneMail implements INodeType {
 	description: INodeTypeDescription = {
 		// Basic node details will go here
-		displayName: 'BCP Mail',
-		name: 'bcpMail',
-		icon: 'file:bcpmail.svg',
+		displayName: 'One Mail',
+		name: 'oneMail',
+		icon: 'file:onemail.svg',
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-		description: 'Push data to BCP Mail API',
+		description: 'Push data to One Mail API',
 		defaults: {
-			name: 'BCP Mail',
+			name: 'One Mail',
 		},
 		inputs: [NodeConnectionType.Main],
 		outputs: [NodeConnectionType.Main],
 		credentials: [
 			{
-				name: 'bcpApi',
+				name: 'oneMailApi',
 				required: true,
 			},
 		],
@@ -61,7 +61,7 @@ export class BcpMail implements INodeType {
 						name: 'Import Subscriber',
 						value: 'import_subscriber',
 						action: 'Import subscriber',
-						description: 'Import subscriber to BCP Mail Automation',
+						description: 'Import subscriber to One Mail Automation',
 						routing: {
 							request: {
 								method: 'POST',
@@ -171,7 +171,7 @@ export class BcpMail implements INodeType {
 								}>;
 
 								// Get the field types directly from the API
-								const credentials = await this.getCredentials('bcpApi');
+								const credentials = await this.getCredentials('oneMailApi');
 								const fieldsResponse = await this.helpers.request({
 									method: 'GET',
 									url: 'https://api.onestop.bizdev.vn/api/bizfly/mail/fields',
@@ -218,7 +218,7 @@ export class BcpMail implements INodeType {
 		loadOptions: {
 			// Gọi API và trả về danh sách options
 			async getAutomations(this: ILoadOptionsFunctions) {
-				const credentials = await this.getCredentials('bcpApi');
+				const credentials = await this.getCredentials('oneMailApi');
 
 				const response = await this.helpers.request({
 					method: 'GET',
@@ -236,7 +236,7 @@ export class BcpMail implements INodeType {
 				}));
 			},
 			async getContactFields(this: ILoadOptionsFunctions) {
-				const credentials = await this.getCredentials('bcpApi');
+				const credentials = await this.getCredentials('oneMailApi');
 
 				const response = await this.helpers.request({
 					method: 'GET',

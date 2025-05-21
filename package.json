@@ -1,7 +1,7 @@
 {
-  "name": "n8n-nodes-bcpmail",
+  "name": "n8n-nodes-oneMail",
   "version": "0.1.0",
-  "description": "n8n nodes for BCP Mail",
+  "description": "n8n nodes for One Mail",
   "keywords": [
     "n8n-community-node-package"
   ],
@@ -9,11 +9,11 @@
   "homepage": "",
   "author": {
     "name": "Quang",
-    "email": "quangdovinh@bizfly.vn"
+    "email": "quangdv001@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/<...>/n8n-nodes-<...>.git"
+    "url": "https://github.com/quangdv001/OneMail.git"
   },
   "engines": {
     "node": ">=20.15"
@@ -33,10 +33,10 @@
   "n8n": {
     "n8nNodesApiVersion": 1,
     "credentials": [
-      "dist/credentials/BcpApi.credentials.js"
+      "dist/credentials/OneMailApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/BcpMail/BcpMail.node.js"
+      "dist/nodes/OneMail/OneMail.node.js"
     ]
   },
   "devDependencies": {

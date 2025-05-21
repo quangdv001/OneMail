@@ -1,5 +1,5 @@
 {
-	"node": "n8n-nodes-base.bcpMail",
+	"node": "n8n-nodes-base.oneMail",
 	"nodeVersion": "1.0",
 	"codexVersion": "1.0",
 	"categories": [
